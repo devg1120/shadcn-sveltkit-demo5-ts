@@ -48,7 +48,7 @@ ___select color___
 						>
 							<span
 								class={cn(
-									"flex h-6 w-6 items-center justify-center rounded-full bg-sky-950"
+									"flex h-6 w-6 items-center justify-center rounded-full bg-green-950"
 								)}
 							>
 								{#if isActive}
