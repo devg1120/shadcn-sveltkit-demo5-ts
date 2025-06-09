@@ -1,0 +1,37 @@
+# cd  src/routes
+# vi ./+layout.js
+export const prerender = true;
+export const ssr = false;
+
+# cd .
+# vi  package.json
+    "@sveltejs/adapter-static": "^2.0.0",
+
+# yarn
+
+# vi svelte.config.js
+//import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static';
+
+
+        kit: {
+                // https://kit.svelte.dev/docs/adapter-cloudflare#options
+                adapter: adapter()
+
+
+# npm run build
+------------------------------------------------------
+<--- JS stacktrace --->
+
+FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
+
+# watch -n 1 free -h
+# export NODE_OPTIONS="--max-old-space-size=2048"
+# npm run build
+
+
+
+
+-------------------------------------------------------
+
+# ./_start_lighttpd.sh 
